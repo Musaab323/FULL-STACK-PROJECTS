@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musaab - Photography Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .sidebar {
+            width: 60px;
+            background-color: #020617;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+        }
+
+        .sidebar a {
+            color: #64748b;
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #10b981;
+
+        }
+
+ 
+        .main-content {
+            margin-left: 60px;
+            width: calc(100% - 60px);
+        }
+
+   
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .btn-contact {
+            background-color: #10b981;
+
+            color: #ffffff;
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .gallery-section {
+            padding: 40px 10%;
+            background-color: #1e293b;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery-grid img {
+            width: 30%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+        .gallery-grid img:hover {
+            filter: brightness(1);
+        }
+
+        .about-contact-section {
+            background-color: #0f172a;
+            padding: 40px 10%;
+            display: flex;
+            gap: 40px;
+        }
+
+        .about-box,
+        .contact-box {
+            flex: 1;
+        }
+
+        .about-box h3,
+        .contact-box h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #10b981;
+       
+        }
+
+        .about-box p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: #10b981;
+            font-size: 16px;
+            margin-right: 12px;
+            text-decoration: none;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .contact-form textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid img {
+                width: 100%;
+            }
+
+            .about-contact-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="#home"><i class="fas fa-home"></i></a>
+        <a href="#gallery"><i class="fas fa-camera"></i></a>
+        <a href="#about"><i class="fas fa-user"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="main-content">
+
+     
+        <section id="home" class="hero">
+            <h1>Hey, I'm Musaab</h1>
+            <p>A web developer & creative photographer based in Jordan</p>
+            <a href="#contact" class="btn-contact">Contact Me</a>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2>What's New</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 1">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 2">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 3">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 4">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 5">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80"
+                    alt="Photo 6">
+            </div>
+        </section>
+
+        <section id="about" class="about-contact-section">
+
+     
+            <div class="about-box">
+                <h3>About Me</h3>
+                <p>Welcome to my portfolio! I am a passionate creator focused on delivering modern web development and
+                    photography projects.</p>
+                <p>Feel free to look through my recent work or get in touch through the form if you'd like to
+                    collaborate.</p>
+                <div class="social-links">
+                    <p><strong>Follow Me:</strong></p>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div id="contact" class="contact-box">
+                <h3>Get in Touch</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

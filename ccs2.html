@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Homework - Account Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+
+        .header-section {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .login-bg-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 480px;
+            margin: 0 auto;
+            background: url('https://picsum.photos/id/1069/1000/600') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(4px);
+            border-radius: 8px;
+            padding: 35px 30px 25px 30px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-card h2 {
+            margin: 0 0 25px 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #111;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.35);
+            color: #222;
+            font-size: 13px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .input-group input::placeholder {
+            color: #777;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #1c5253;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #143d3e;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #333;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .remember-me input {
+            margin: 0;
+        }
+
+        .forgot-link {
+            color: #3f51b5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-section">
+        <p><strong>Subject:</strong> CSS</p>
+        <p><strong>Home Work:</strong></p>
+        <ol>
+            <li>
+                Create a webpage like this.<br>
+                <strong>Note:</strong> host the page in github, then provide the link to your trainer.
+            </li>
+        </ol>
+    </div>
+
+    <div class="login-bg-container">
+        <div class="login-card">
+            <h2>Account Login</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">LOGIN</button>
+                <div class="card-footer">
+                    <label class="remember-me">
+                        <input type="checkbox"> remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forget Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

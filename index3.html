@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+
+        .header-text {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .form-container {
+            font-family: "Times New Roman", Times, serif;
+            margin-top: 20px;
+        }
+
+        .form-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .form-header h1 {
+            color: red;
+            font-weight: normal;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        form table {
+            border-collapse: collapse;
+        }
+
+        form td {
+            padding: 4px 8px;
+            vertical-align: top;
+        }
+
+        .label-col {
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            font-family: inherit;
+            border: 1px solid #7a7a7a;
+            padding: 2px 4px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .checkbox-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 200px;
+            height: 60px;
+            font-family: monospace;
+            color: #888;
+        }
+
+        .button-row {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #e1e1e1;
+            border: 1px solid #7a7a7a;
+            padding: 2px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-text">
+        <p><strong>Subject:</strong> HTML</p>
+        <p><strong>Description:</strong> Create a web page exactly like this one using these elements.</p>
+        <p><strong>Note:</strong> host the page in github, then provide the link to your trainer.</p>
+        <p><strong>Home Work:</strong></p>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <div class="form-header">
+                <!-- Replace 'icon.png' with your actual icon image path -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Employee Icon">
+                <h1>Employee Registration Form</h1>
+            </div>
+
+            <table>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="radio-group">
+                            <input type="radio" id="mr" name="salutation" value="Mr." checked>
+                            <label for="mr"><strong>Mr.</strong></label>
+                            <input type="radio" id="mrs" name="salutation" value="Mrs.">
+                            <label for="mrs"><strong>Mrs.</strong></label>
+                            <input type="radio" id="ms" name="salutation" value="Ms.">
+                            <label for="ms"><strong>Ms.</strong></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="first_name">First Name</label></td>
+                    <td><input type="text" id="first_name" name="first_name" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="last_name">Last Name</label></td>
+                    <td><input type="text" id="last_name" name="last_name" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="address1">Mail Address1</label></td>
+                    <td><input type="text" id="address1" name="address1"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="address2">Mail Address2</label></td>
+                    <td><input type="text" id="address2" name="address2"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="city">City</label></td>
+                    <td><input type="text" id="city" name="city"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="state">State</label></td>
+                    <td>
+                        <select id="state" name="state">
+                            <option value="Gujarat" selected>Gujarat</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="zip">Zip</label></td>
+                    <td><input type="text" id="zip" name="zip"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="photo">Upload Photo</label></td>
+                    <td><input type="file" id="photo" name="photo"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="email">E-Mail</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="mobile">Mobile</label></td>
+                    <td><input type="text" id="mobile" name="mobile" value="+91"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Languages known</td>
+                    <td>
+                        <div class="checkbox-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="gujarati" name="languages" value="Gujarati" checked>
+                                <label for="gujarati">Gujarati</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="hindi" name="languages" value="Hindi" checked>
+                                <label for="hindi">Hindi</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="english" name="languages" value="English" checked>
+                                <label for="english">English</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="marathi" name="languages" value="Marathi">
+                                <label for="marathi">Marathi</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="additional_info">Additional Information</label></td>
+                    <td>
+                        <textarea id="additional_info" name="additional_info">Optional</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-row">
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

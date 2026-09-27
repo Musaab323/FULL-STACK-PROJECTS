@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Homework</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000;
+        }
+
+        .header-section {
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .link-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hover-btn {
+            display: inline-block;
+            text-decoration: none;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: 2px solid #2e7d32;
+            color: #000000;
+            background-color: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .hover-btn:hover {
+            background-color: #388e3c;
+            color: #ffffff;
+        }
+
+        .custom-list-container {
+            background-color: #ffff00;
+            padding: 15px 20px;
+            width: fit-content;
+            min-width: 500px;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        .custom-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #e67e22;
+        }
+
+        .z-index-container {
+            position: relative;
+            width: 400px;
+            min-height: 200px;
+            font-family: "Times New Roman", Times, serif;
+            padding-top: 10px;
+        }
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
+            height: 180px;
+            background-color: #ffc000; 
+            background-image: radial-gradient(#e67e22 15%, transparent 16%);
+            background-size: 8px 8px;
+            z-index: -1;
+        }
+
+        .z-index-container h1 {
+            font-size: 32px;
+            margin: 0 0 20px 0;
+        }
+
+        .z-index-container p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <p><strong>Subject:</strong> CSS</p>
+        <p><strong>Home Work:</strong></p>
+        <ol>
+            <li>
+                Create a webpage with these 3 tasks.<br>
+                <strong>Note:</strong> host the page in github, then provide the link to your trainer.
+            </li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <div class="link-container">
+            <div>
+                <p><strong>Before hover</strong></p>
+                <a href="#" class="hover-btn">This is a link</a>
+            </div>
+            <div>
+                <p><strong>After Hover</strong></p>
+                <a href="#" class="hover-btn" style="background-color: #388e3c; color: #ffffff;">This is a link</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="custom-list-container">
+            <ul class="custom-list">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ul>
+        </div>
+    </div>
+>
+    <div class="section">
+        <div class="z-index-container">
+            <div class="bg-image"></div>
+            <h1>This is a heading</h1>
+            <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+        </div>
+    </div>
+
+</body>
+</html>
