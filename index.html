@@ -3,28 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musaab's Projects Directory</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 40px; background: #0f172a; color: white; }
-        h1 { color: #10b981; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 18px; }
-        a:hover { color: #10b981; }
-    </style>
+    <title>Musaab's Full-Stack & Web Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <h1>Musaab's Full-Stack Projects</h1>
-    <p>Click any link below to view the live page:</p>
-    <ul>
-        <li><a href="FULL WEBSITE.html">1. Full Portfolio Website</a></li>
-        <li><a href="React.homeowrk.html">2. React Homework</a></li>
-        <li><a href="css3.html">3. CSS Assignment 3</a></li>
-        <li><a href="ccs2.html">4. CSS Assignment 2</a></li>
-        <li><a href="css1.html">5. CSS Assignment 1</a></li>
-        <li><a href="index1.html">6. Index 1</a></li>
-        <li><a href="index2.html">7. Index 2</a></li>
-        <li><a href="index3.html">8. Index 3</a></li>
-    </ul>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-center items-center p-6">
+
+    <div class="max-w-2xl w-full bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
+        <div class="text-center mb-8">
+            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold rounded-full uppercase tracking-wider">
+                Full-Stack MERN Portfolio
+            </span>
+            <h1 class="text-3xl font-extrabold text-white mt-3">Musaab's Projects</h1>
+            <p class="text-slate-400 text-sm mt-2">Select any assignment below to view the live project:</p>
+        </div>
+
+        <div class="space-y-3">
+            <!-- MERN Full Stack Showcase -->
+            <a href="mern-showcase.html" class="flex items-center justify-between p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl hover:bg-emerald-500/20 transition group">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-server text-emerald-400 text-lg"></i>
+                    <div>
+                        <h3 class="font-bold text-emerald-300 group-hover:text-emerald-200">Full-Stack MERN Dashboard</h3>
+                        <p class="text-xs text-emerald-400/80">Interactive React + MongoDB + Express REST API</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right text-emerald-400 group-hover:translate-x-1 transition"></i>
+            </a>
+
+            <!-- Other Assignments -->
+            <a href="FULL WEBSITE.html" target="_blank" class="flex items-center justify-between p-4 bg-slate-800/60 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition">
+                <span class="font-medium text-slate-200"><i class="fa-solid fa-globe mr-2 text-sky-400"></i> Full Portfolio Website</span>
+                <i class="fa-solid fa-external-link text-slate-500 text-sm"></i>
+            </a>
+
+            <a href="React.homeowrk.html" target="_blank" class="flex items-center justify-between p-4 bg-slate-800/60 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition">
+                <span class="font-medium text-slate-200"><i class="fa-fab fa-react mr-2 text-sky-400"></i> React Homework (Employee Records)</span>
+                <i class="fa-solid fa-external-link text-slate-500 text-sm"></i>
+            </a>
+
+            <a href="css3.html" target="_blank" class="flex items-center justify-between p-4 bg-slate-800/60 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition">
+                <span class="font-medium text-slate-200"><i class="fa-brands fa-css3-alt mr-2 text-blue-400"></i> CSS Assignment 3</span>
+                <i class="fa-solid fa-external-link text-slate-500 text-sm"></i>
+            </a>
+
+            <a href="ccs2.html" target="_blank" class="flex items-center justify-between p-4 bg-slate-800/60 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition">
+                <span class="font-medium text-slate-200"><i class="fa-brands fa-css3-alt mr-2 text-blue-400"></i> CSS Assignment 2</span>
+                <i class="fa-solid fa-external-link text-slate-500 text-sm"></i>
+            </a>
+
+            <a href="css1.html" target="_blank" class="flex items-center justify-between p-4 bg-slate-800/60 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition">
+                <span class="font-medium text-slate-200"><i class="fa-brands fa-css3-alt mr-2 text-blue-400"></i> CSS Assignment 1</span>
+                <i class="fa-solid fa-external-link text-slate-500 text-sm"></i>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
