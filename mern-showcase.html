@@ -1,1 +1,56 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN Stack Interactive Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel standalone to compile JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function MernDashboard() {
+        const [projects, setProjects] = useState([
+          { _id: "650f1a2b1", title: "E-Commerce REST API", category: "Full Stack MERN", status: "Completed", author: "Musaab", budget: 1200 },
+          { _id: "650f1a2b2", title: "Real-time Chat App", category: "WebSockets", status: "In Progress", author: "Musaab", budget: 850 },
+          { _id: "650f1a2b3", title: "Employee Management System", category: "CRUD Application", status: "Completed", author: "Musaab", budget: 500 }
+        ]);
+
+        return (
+          <div className="p-8 max-w-5xl mx-auto space-y-6">
+            <header className="border-b border-slate-800 pb-4">
+              <h1 className="text-2xl font-bold text-emerald-400">MERN Stack Live Showcase</h1>
+              <p className="text-slate-400 text-sm">MongoDB + Express + React + Node.js Dashboard</p>
+            </header>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {projects.map(p => (
+                <div key={p._id} className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                  <span className="text-xs text-emerald-400 font-semibold">{p.category}</span>
+                  <h3 className="font-bold text-lg text-white mt-1">{p.title}</h3>
+                  <p className="text-slate-400 text-xs mt-2">Author: {p.author}</p>
+                  <div className="mt-4 pt-3 border-t border-slate-800 flex justify-between items-center text-xs">
+                    <span className="text-slate-300">${p.budget}</span>
+                    <span className="text-teal-400 font-semibold">{p.status}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<MernDashboard />);
+    </script>
+</body>
+</html>
